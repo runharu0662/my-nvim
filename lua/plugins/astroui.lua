@@ -14,9 +14,11 @@ return {
     highlights = {
       init = { -- this table overrides highlights in all themes
        Normal = { bg = "NONE" },
+       NormalNC = { bg = "NONE" }, -- 分割ウィンドウ用の背景透過
       },
       astrodark = { -- a table of overrides/changes when applying the astrotheme theme
        Normal = { bg = "NONE" },
+       NormalNC = { bg = "NONE" },
       },
     },
     -- Icons can be configured throughout the interface
