@@ -21,6 +21,8 @@ return {
         NeoTreeEndOfBuffer = { bg = "NONE" },
         NeoTreeCursorLine = { bg = "NONE" },
         NeoTreeWinSeparator = { bg = "NONE" },
+        NormalFloat = { bg = "NONE" }, -- 浮動ウィンドウの背景透過
+        FloatBorder = { bg = "NONE" }, -- 浮動ウィンドウの枠の背景透過
       },
       astrodark = {
         Normal = { bg = "NONE" },
@@ -30,8 +32,10 @@ return {
         NeoTreeEndOfBuffer = { bg = "NONE" },
         NeoTreeCursorLine = { bg = "NONE" },
         NeoTreeWinSeparator = { bg = "NONE" },
+        NormalFloat = { bg = "NONE" }, -- astrodarkテーマでも floatterm を透過
+        FloatBorder = { bg = "NONE" }, -- 枠の背景透過
       },
-    }
+    },
 
     -- Icons can be configured throughout the interface
     icons = {
