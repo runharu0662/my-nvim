@@ -12,26 +12,32 @@ return {
     colorscheme = "astrodark",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
-        init = {
-          Normal = { bg = "NONE" }, -- 通常の背景透過
-          NormalNC = { bg = "NONE" }, -- 分割ウィンドウ用の背景透過
-          -- Neo-tree 関連のハイライトグループ
-          NeoTreeNormal = { bg = "NONE" }, -- Neo-treeの背景透過
-          NeoTreeNormalNC = { bg = "NONE" }, -- 分割ウィンドウのNeo-tree背景透過
-          NeoTreeEndOfBuffer = { bg = "NONE" }, -- Bufferの終わり部分の背景透過
-          NeoTreeCursorLine = { bg = "NONE" }, -- カーソル行の背景透過
-          NeoTreeWinSeparator = { bg = "NONE" }, -- ウィンドウ分割線の背景透過
-        },
-        astrodark = {
-          Normal = { bg = "NONE" },
-          NormalNC = { bg = "NONE" },
-          NeoTreeNormal = { bg = "NONE" },
-          NeoTreeNormalNC = { bg = "NONE" },
-          NeoTreeEndOfBuffer = { bg = "NONE" },
-          NeoTreeCursorLine = { bg = "NONE" },
-          NeoTreeWinSeparator = { bg = "NONE" },
-        },
-    },
+      init = {
+        Normal = { bg = "NONE" }, -- 通常の背景透過
+        NormalNC = { bg = "NONE" }, -- 分割ウィンドウ用の背景透過
+        -- Neo-tree 関連のハイライトグループ
+        NeoTreeNormal = { bg = "NONE" }, -- Neo-treeの背景透過
+        NeoTreeNormalNC = { bg = "NONE" },
+        NeoTreeEndOfBuffer = { bg = "NONE" },
+        NeoTreeCursorLine = { bg = "NONE" },
+        NeoTreeWinSeparator = { bg = "NONE" },
+        -- floatterm の透過設定
+        NormalFloat = { bg = "NONE" }, -- 浮動ウィンドウの背景透過
+        FloatBorder = { bg = "NONE" }, -- 浮動ウィンドウの枠の背景透過
+      },
+      astrodark = {
+        Normal = { bg = "NONE" },
+        NormalNC = { bg = "NONE" },
+        NeoTreeNormal = { bg = "NONE" },
+        NeoTreeNormalNC = { bg = "NONE" },
+        NeoTreeEndOfBuffer = { bg = "NONE" },
+        NeoTreeCursorLine = { bg = "NONE" },
+        NeoTreeWinSeparator = { bg = "NONE" },
+        NormalFloat = { bg = "NONE" }, -- astrodarkテーマでも floatterm を透過
+        FloatBorder = { bg = "NONE" }, -- 枠の背景透過
+      },
+    }
+
     -- Icons can be configured throughout the interface
     icons = {
       -- configure the loading of the lsp in the status line
