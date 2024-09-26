@@ -3,6 +3,7 @@ return {
   lazy = false,  -- プラグインを常にロード
   config = function()
     vim.g.copilot_no_tab_map =  true -- タブキーを無効にする
+    vim.g.copilot_enabled = 1 -- Copilot 有効
 
     vim.api.nvim_create_user_command('ToggleCopilot', function()
       if vim.g.copilot_enabled == 1 then
