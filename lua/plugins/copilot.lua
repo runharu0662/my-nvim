@@ -3,10 +3,9 @@ return {
   lazy = false,  -- プラグインを常にロード
   config = function()
     -- Copilot のデフォルト設定をカスタマイズ
-    vim.g.copilot_enabled = 1  -- デフォルトで有効にする
-    vim.g.copilot_no_tab_map = true  -- Copilot のTabマッピングを有効にする
+    vim.g.copilot_enabled = 0 --  デフォルトで無効にする
+    vim.g.copilot_no_tab_map =  false -- タブキーを無効にする
 
-    -- キーマッピングの例 (オン/オフをトグルする)
     vim.api.nvim_create_user_command('ToggleCopilot', function()
       if vim.g.copilot_enabled == 1 then
         vim.cmd('Copilot disable')

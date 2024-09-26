@@ -5,7 +5,8 @@ vim.api.nvim_set_keymap('n', '<Space><Space>', ':wa <bar> :QuickRun <stdin.txt<C
 vim.api.nvim_create_user_command('InsTemp', function()
   -- テンプレートファイルの相対パスを指定
   local current_dir = vim.fn.expand('%:p:h')
-  local template_path = base_dir .. '/../../template/atc.cpp'
+  local template_path = '~/.config/nvim-astro/template/atc.cpp'
+
 
   -- 現在のバッファにテンプレートファイルの内容を挿入
   vim.cmd('0r ' .. template_path)
