@@ -15,18 +15,6 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
--- Key mapping
-vim.api.nvim_set_keymap('n', '<Space><Space>', ':wa <bar> :QuickRun <stdin.txt<CR>', { noremap = true, silent = true })
-
-vim.api.nvim_create_user_command('InsTemp', function()
-  -- 現在のファイルのディレクトリパスを取得して、テンプレートファイルの相対パスを指定
-  local current_dir = vim.fn.expand('%:p:h')
-  local template_path = current_dir .. '/template/atc.cpp'
-
-  -- 現在のバッファにテンプレートファイルの内容を挿入
-  vim.cmd('0r ' .. template_path)
-end, {})
-
 require "lazy_setup"
 require "polish"
 require "keymaps"

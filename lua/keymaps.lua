@@ -15,3 +15,5 @@ end, {})
 -- Space i t のショートカットに割り当てる
 vim.api.nvim_set_keymap('n', '<Space>it', ':InsTemp<CR>', { noremap = true, silent = true })
 
+-- jkでEscを実行する（挿入モード）
+vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true })
