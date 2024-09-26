@@ -17,3 +17,10 @@ vim.api.nvim_set_keymap('n', '<Space>it', ':InsTemp<CR>', { noremap = true, sile
 
 -- jkでEscを実行する（挿入モード）
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true })
+
+--ファイルを作成する
+vim.api.nvim_set_keymap('n', '<leader>n', ':NeoTreeCreate<CR>', { noremap = true, silent = true })
+--ファイルを削除する
+vim.api.nvim_set_keymap('n', '<leader>d', ':NeoTreeDelete<CR>', { noremap = true, silent = true })
+--ファイル名を変更する
+vim.api.nvim_set_keymap('n', '<leader>r', ':NeoTreeRename<CR>', { noremap = true, silent = true })
