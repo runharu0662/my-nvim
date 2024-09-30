@@ -26,7 +26,7 @@ return {
     keymap("i", "<C-s>", "<Plug>(copilot-suggest)", { desc = "Copilot suggest manually" })
 
     -- Copilot のトグルをキーに割り当てる (例: <leader>Gp)
-    keymap('n', '<leader>Gp', ':ToggleCopilot<CR>', { noremap = true, silent = true, desc = "Toggle Copilot" })
+    keymap('n', '<leader>gg', ':ToggleCopilot<CR>', { noremap = true, silent = true, desc = "Toggle Github Copilot" })
   end
 }
 
