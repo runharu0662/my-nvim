@@ -1,4 +1,5 @@
 -- cppファイルの実行
+vim.keymap.set('n', "<leader>I", "<Nop>", { noremap = true, silent = true, desc = "about cpp" })
 vim.keymap.set('n', '<Space>I<Space>', ':wa <bar> :QuickRun <stdin.txt<CR>', { noremap = true, silent = true, desc = "cpp QuickRun" })
 
 -- テンプレートファイルの挿入コマンド
