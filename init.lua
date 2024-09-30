@@ -15,6 +15,12 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+  -- 既存の <leader>w の保存マッピングを解除
+  { "<leader>w", "<cmd>w<cr>", desc = "Save File", mode = { "n", "v" }, opts = { noremap = true, silent = true }, action = nil },
+
+  -- 新しく <leader>W に保存マッピングを割り当てる
+  { "<leader>W", "<cmd>w<cr>", desc = "Save File" },
+
 require "lazy_setup"
 require "polish"
 require "keymaps"
