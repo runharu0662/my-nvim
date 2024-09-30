@@ -26,6 +26,6 @@ return {
     keymap("i", "<C-s>", "<Plug>(copilot-suggest)")
 
     -- Copilot のトグルをキーに割り当てる (例: <leader>cp)
-    vim.api.nvim_set_keymap('n', '<leader>Gp', ':ToggleCopilot<CR>', { noremap = true, silent = true }, desc = "Toggle Copilot")
+    keymap('n', '<leader>Gp', ':ToggleCopilot<CR>', { noremap = true, silent = true }, desc = "Toggle Copilot")
   end
 }
