@@ -1,5 +1,5 @@
 -- cppファイルの実行
-vim.api.nvim_set_keymap('n', '<Space><Space>', ':wa <bar> :QuickRun <stdin.txt<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>I<Space>', ':wa <bar> :QuickRun <stdin.txt<CR>', { noremap = true, silent = true }, desc = "cpp QuickRun") 
 
 -- テンプレートファイルの挿入コマンド
 vim.api.nvim_create_user_command('InsTemp', function()
@@ -13,7 +13,7 @@ vim.api.nvim_create_user_command('InsTemp', function()
 end, {})
 
 -- Space i t のショートカットに割り当てる
-vim.api.nvim_set_keymap('n', '<Space>it', ':InsTemp<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>It', ':InsTemp<CR>', { noremap = true, silent = true }, desc = "cpp Template" )
 
 -- jkでEscを実行する（挿入モード）
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true })
