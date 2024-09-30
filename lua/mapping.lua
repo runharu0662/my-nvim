@@ -17,8 +17,3 @@ vim.keymap.set('n', '<Space>it', ':InsTemp<CR>', { noremap = true, silent = true
 -- jkでEscを実行する（挿入モード）
 vim.keymap.set('i', 'jk', '<Esc>', { noremap = true, silent = true })
 
--- 既存の <leader>w の保存マッピングを解除
-vim.keymap.set("n", "<leader>w", "", { noremap = true, silent = true })
-
--- 新しく <leader>W に保存マッピングを設定
-vim.keymap.set("n", "<leader>W", "<cmd>w<cr>", { noremap = true, silent = true, desc = "Save File" })
