@@ -19,13 +19,14 @@ return {
 
     local keymap = vim.keymap.set
 
-    keymap("i", "<C-g>", 'copilot#Accept("<CR>")', { silent = true, expr = true, script = true, replace_keycodes = false })
-    keymap("i", "<C-j>", "<Plug>(copilot-next)")
-    keymap("i", "<C-k>", "<Plug>(copilot-previous)")
-    keymap("i", "<C-o>", "<Plug>(copilot-dismiss)")
-    keymap("i", "<C-s>", "<Plug>(copilot-suggest)")
+    keymap("i", "<C-g>", 'copilot#Accept("<CR>")', { silent = true, expr = true, script = true, replace_keycodes = false, desc = "Copilot accept suggestion" })
+    keymap("i", "<C-j>", "<Plug>(copilot-next)", { desc = "Copilot next suggestion" })
+    keymap("i", "<C-k>", "<Plug>(copilot-previous)", { desc = "Copilot previous suggestion" })
+    keymap("i", "<C-o>", "<Plug>(copilot-dismiss)", { desc = "Copilot dismiss suggestion" })
+    keymap("i", "<C-s>", "<Plug>(copilot-suggest)", { desc = "Copilot suggest manually" })
 
-    -- Copilot のトグルをキーに割り当てる (例: <leader>cp)
-    keymap('n', '<leader>Gp', ':ToggleCopilot<CR>', { noremap = true, silent = true }, desc = "Toggle Copilot")
+    -- Copilot のトグルをキーに割り当てる (例: <leader>Gp)
+    keymap('n', '<leader>Gp', ':ToggleCopilot<CR>', { noremap = true, silent = true, desc = "Toggle Copilot" })
   end
 }
+
