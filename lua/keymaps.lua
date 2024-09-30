@@ -17,10 +17,3 @@ vim.api.nvim_set_keymap('n', '<Space>it', ':InsTemp<CR>', { noremap = true, sile
 
 -- jkでEscを実行する（挿入モード）
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true })
-
-return {
-  v = {
-    ["J"] = { ":move '>+1<CR>gv-gv", desc = "Move lines of code up" },
-    ["K"] = { ":move '<-2<CR>gv-gv", desc = "Move lines of code down" },
-  },
-}
