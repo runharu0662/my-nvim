@@ -29,36 +29,6 @@ return {
     config = function()
       -- conceallevelの設定をVimに適用
       vim.opt.conceallevel = 1
-
-      -- Obsidianのコマンドを追加
-      local cmds = {
-        "ObsidianBacklinks",
-        "ObsidianCheck",
-        "ObsidianFollowLink",
-        "ObsidianLink",
-        "ObsidianLinkNew",
-        "ObsidianNew",
-        "ObsidianOpen",
-        "ObsidianPasteImg",
-        "ObsidianQuickSwitch",
-        "ObsidianRename",
-        "ObsidianSearch",
-        "ObsidianTemplate",
-        "ObsidianToday",
-        "ObsidianTomorrow",
-        "ObsidianWorkspace",
-        "ObsidianYesterday",
-      }
-
-      -- コマンドを登録
-      for _, cmd in ipairs(cmds) do
-        vim.cmd("command! " .. cmd .. " Obsidian" .. cmd)
-      end
-
-      -- gfマッピングを上書きし、説明を追加
-      vim.keymap.set('n', 'gf', function()
-        return require('obsidian').util.gf_passthrough()
-      end, { noremap = false, expr = true, buffer = true, desc = "Go to Obsidian link" })
     end,
   },
   {
@@ -68,3 +38,4 @@ return {
     }
   }
 }
+
