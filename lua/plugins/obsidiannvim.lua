@@ -1,3 +1,4 @@
+
 return {
   {
     "epwalsh/obsidian.nvim",
@@ -25,27 +26,34 @@ return {
         enable = true,  -- UI機能を有効化したい場合
       },
     },
-    local cmds = {
-      "ObsidianBacklinks",
-      "ObsidianCheck",
-      "ObsidianFollowLink",
-      "ObsidianLink",
-      "ObsidianLinkNew",
-      "ObsidianNew",
-      "ObsidianOpen",
-      "ObsidianPasteImg",
-      "ObsidianQuickSwitch",
-      "ObsidianRename",
-      "ObsidianSearch",
-      "ObsidianTemplate",
-      "ObsidianToday",
-      "ObsidianTomorrow",
-      "ObsidianWorkspace",
-      "ObsidianYesterday",
-    }
     config = function()
       -- conceallevelの設定をVimに適用
       vim.opt.conceallevel = 1
+
+      -- Obsidianのコマンドを追加
+      local cmds = {
+        "ObsidianBacklinks",
+        "ObsidianCheck",
+        "ObsidianFollowLink",
+        "ObsidianLink",
+        "ObsidianLinkNew",
+        "ObsidianNew",
+        "ObsidianOpen",
+        "ObsidianPasteImg",
+        "ObsidianQuickSwitch",
+        "ObsidianRename",
+        "ObsidianSearch",
+        "ObsidianTemplate",
+        "ObsidianToday",
+        "ObsidianTomorrow",
+        "ObsidianWorkspace",
+        "ObsidianYesterday",
+      }
+
+      -- コマンドを登録
+      for _, cmd in ipairs(cmds) do
+        vim.cmd("command! " .. cmd .. " Obsidian" .. cmd)
+      end
 
       -- gfマッピングを上書きし、説明を追加
       vim.keymap.set('n', 'gf', function()
@@ -60,4 +68,3 @@ return {
     }
   }
 }
-
