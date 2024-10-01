@@ -28,6 +28,11 @@ return {
     config = function()
       -- conceallevelの設定をVimに適用
       vim.opt.conceallevel = 1
+
+      -- gfマッピングを上書きし、説明を追加
+      vim.keymap.set('n', 'gf', function()
+        return require('obsidian').util.gf_passthrough()
+      end, { noremap = false, expr = true, buffer = true, desc = "Go to Obsidian link" })
     end,
   },
   {
