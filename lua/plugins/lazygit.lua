@@ -1,4 +1,5 @@
 -- nvim v0.8.0
+-- 上手くいかん
 return {
   "kdheepak/lazygit.nvim",
   cmd = {
