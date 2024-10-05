@@ -17,3 +17,7 @@ vim.keymap.set('n', '<Space>it', ':InsTemp<CR>', { noremap = true, silent = true
 -- jkでEscを実行する（挿入モード）
 vim.keymap.set('i', 'jk', '<Esc>', { noremap = true, silent = true })
 
+-- 行の折り返し
+
+vim.opt.wrap = true
+vim.opt.linebreak = true
