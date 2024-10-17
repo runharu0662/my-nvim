@@ -17,6 +17,10 @@ vim.keymap.set('n', '<Space>it', ':InsTemp<CR>', { noremap = true, silent = true
 -- jkでEscを実行する（挿入モード）
 vim.keymap.set('i', 'jk', '<Esc>', { noremap = true, silent = true })
 
+-- 行の折り返し
+
+vim.opt.wrap = true
+vim.opt.linebreak = true
 
 -- Normal mode (n)
 vim.keymap.set('n', '<A-i>', '<cmd>ToggleTerm direction=float<CR>', { noremap = true, silent = true, desc = "Toggle floating terminal" })
