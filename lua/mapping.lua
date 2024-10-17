@@ -17,3 +17,26 @@ vim.keymap.set('n', '<Space>it', ':InsTemp<CR>', { noremap = true, silent = true
 -- jkでEscを実行する（挿入モード）
 vim.keymap.set('i', 'jk', '<Esc>', { noremap = true, silent = true })
 
+return {
+  n = {
+    -- resize
+    ["<A-l>"] = { ":vertical resize +2<CR>" },
+    ["<A-h>"] = { ":vertical resize -2<CR>" },
+    ["<A-j>"] = { ":resize -2<CR>" },
+    ["<A-k>"] = { ":resize +2<CR>" },
+    ["<A-=>"] = { "<C-w>=", desc = "Resize equal" },
+    -- split
+    ["<A-v>"] = { "<C-w>v", desc = "Split window vertically" },
+    ["<A-s>"] = { "<C-w>s", desc = "Split window horizontally" },
+  
+    -- terminal
+    ["<A-i>"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "Toggle floating terminal" },
+    ["<A-H>"] = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "Toggle horizontal terminal" },
+    ["<A-V>"] = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", desc = "Toggle vertical terminal" },
+  },  
+  t = {
+    ["<A-i>"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "toggle floating terminal" },
+    ["<A-H>"] = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "toggle horizontal terminal" },
+    ["<A-V>"] = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", desc = "toggle vertical terminal" },
+  },
+}
