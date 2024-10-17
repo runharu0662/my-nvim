@@ -27,4 +27,3 @@ vim.keymap.set('n', '<A-i>', '<cmd>ToggleTerm direction=float<CR>', { noremap = 
 
 -- Terminal mode (t)
 vim.keymap.set('t', '<A-i>', '<cmd>ToggleTerm direction=float<CR>', { noremap = true, silent = true, desc = "Toggle floating terminal" })
-
