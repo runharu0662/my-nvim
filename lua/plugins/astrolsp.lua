@@ -1,4 +1,3 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroLSP allows you to customize the features in AstroNvim's LSP configuration engine
 -- Configuration documentation can be found with `:h astrolsp`
@@ -22,19 +21,8 @@ return {
       format_on_save = {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
-          "lua",
-          "typescript",
-          "javascript",
-          "json",
-          "markdown",
-          "html",
-          "css",
-          "tsx",
-          "jsx",
-          "c",
-          "cpp",
-          "python",
-        },
+          -- "c"
+                  },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
         },
