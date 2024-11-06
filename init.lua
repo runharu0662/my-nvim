@@ -18,4 +18,4 @@ end
 require "lazy_setup"
 require "polish"
 require "mapping"
-reqyire"lspconfig"
+require"lspconfig"

@@ -21,7 +21,7 @@ return {
       format_on_save = {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
-           { "typescript", "javascript", "json", "html", "css", "markdown", "c", "cpp" },
+          "cpp","c","lua","python","rust","typescript","javascript","json","yaml","html","css","scss","markdown","sh","vim","go","java","php","ruby","typescriptreact","javascriptreact","vue","svelte","graphql","graphqls","graphqlschema","sql","dockerfile","xml","jsonc","yaml","toml","ini","cmake","makefile","dart","swift","kotlin","scala","groovy","r","rmd","rout","rhistory","rprofile","rdata","rproj","rkt",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
