@@ -22,7 +22,7 @@ return {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
            { "typescript", "javascript", "json", "html", "css", "markdown", "c", "cpp" },
-                  },
+        },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
         },
@@ -38,15 +38,11 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
-      clangd = {
-        cmd = { "clangd", "--std=c++20" },  -- C++20を指定
-      },
     },
     -- customize how language servers are attached
     handlers = {

@@ -1,19 +1,42 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
--- Customize Mason plugins
-
----@type LazySpec
 return {
   -- use mason-lspconfig to configure LSP installations
   {
     "williamboman/mason-lspconfig.nvim",
-    -- overrides `require("mason-lspconfig").setup(...)`
-    opts = {
-      ensure_installed = {
-        "lua_ls",
-        -- add more arguments for adding more language servers
-      },
-    },
+    dependencies = { "williamboman/mason.nvim" },
+    config = function()
+      require("mason-lspconfig").setup {
+        ensure_installed = {
+          "lua_ls",
+          "bashls",
+          "clangd",
+          "cmake",
+          "cssls",
+          "dockerls",
+          "docker_compose_language_service",
+          "gopls",
+          "html",
+          "jsonls",
+          "tsserver",
+          "marksman",
+          "nimls",
+          "pylsp",
+        }
+      }
+
+      -- Automatically set up LSP configurations with custom options for clangd
+      require("mason-lspconfig").setup_handlers {
+        function(server_name)
+          local opts = {}
+          if server_name == "clangd" then
+            opts = {
+              cmd = { "clangd", "--std=c++20" }  -- set C++ standard to C++20
+            }
+          end
+          require("lspconfig")[server_name].setup(opts)
+        end,
+      }
+    end
   },
   -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
   {
@@ -37,3 +60,4 @@ return {
     },
   },
 }
+
