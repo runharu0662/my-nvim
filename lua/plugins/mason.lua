@@ -5,9 +5,8 @@ return {
         -- overrides `require("mason-lspconfig").setup(...)`
         opts = {
             ensure_installed = {
-                "tsserver",
                 "clangd",
-                "markdownlint",
+                "typescript-language-server",
                 -- add more arguments for adding more LSP servers
             },
         },
