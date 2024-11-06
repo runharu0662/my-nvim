@@ -9,7 +9,6 @@ return {
                 "ast_grep",
                 "ltex",
                 "grammarly",
-
                 -- add more arguments for adding more LSP servers
             },
         },
