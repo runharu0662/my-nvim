@@ -1,6 +1,5 @@
-local lspconfig = require('lspconfig')
+local lspconfig = require "lspconfig"
 
 lspconfig.options.clangd {
-  cmd = { "clangd", "--std=c++20" },
+    cmd = { "clangd", "--std=c++20" },
 }
-
