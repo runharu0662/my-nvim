@@ -1,4 +1,3 @@
-
 return {
   -- use mason-lspconfig to configure LSP installations
   {
@@ -23,20 +22,6 @@ return {
           "pylsp",
         }
       }
-
-      -- Automatically set up LSP configurations with custom options for clangd
-      require("mason-lspconfig").setup_handlers {
-        function(server_name)
-          local opts = {}
-          if server_name == "clangd" then
-            opts = {
-              cmd = { "clangd", "--std=c++20" }  -- set C++ standard to C++20
-            }
-          end
-          require("lspconfig")[server_name].setup(opts)
-        end,
-      }
-    end
   },
   -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
   {
