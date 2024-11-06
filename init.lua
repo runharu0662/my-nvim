@@ -22,12 +22,3 @@ require "lspconfig"
 
 vim.opt.tabstop = 4 -- タブ文字が表すスペースの幅
 vim.opt.shiftwidth = 4 -- 自動インデントの幅
-
-local lspconfig = require "lspconfig"
-
-lspconfig.clangd.setup {
-    cmd = { "clangd", "--std=c++20" },
-    init_options = {
-        clangdFileStatus = true,
-    },
-}
