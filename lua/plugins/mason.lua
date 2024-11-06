@@ -8,7 +8,6 @@ return {
                 "tsserver",
                 "clangd",
                 "markdownlint",
-                "jsonls",
                 -- add more arguments for adding more LSP servers
             },
         },
