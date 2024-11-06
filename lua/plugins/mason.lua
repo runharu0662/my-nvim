@@ -6,7 +6,7 @@ return {
         opts = {
             ensure_installed = {
                 "clangd",
-                "ast_grep",
+                "eslint",
                 "ltex",
                 "grammarly",
                 -- add more arguments for adding more LSP servers
