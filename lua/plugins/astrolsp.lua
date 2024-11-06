@@ -44,6 +44,9 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      clangd = {
+        cmd = { "clangd", "--std=c++20" },  -- C++20を指定
+      },
     },
     -- customize how language servers are attached
     handlers = {
