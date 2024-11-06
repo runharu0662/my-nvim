@@ -6,7 +6,10 @@ return {
         opts = {
             ensure_installed = {
                 "clangd",
-                "typescript-language-server",
+                "ast_grep",
+                "ltex",
+                "grammarly",
+
                 -- add more arguments for adding more LSP servers
             },
         },
