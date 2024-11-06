@@ -1,27 +1,18 @@
 return {
   -- use mason-lspconfig to configure LSP installations
   {
-    "williamboman/mason-lspconfig.nvim",
-    dependencies = { "williamboman/mason.nvim" },
-    config = function()
-      require("mason-lspconfig").setup {
-        ensure_installed = {
-          "lua_ls",
-          "bashls",
-          "clangd",
-          "cmake",
-          "cssls",
-          "dockerls",
-          "docker_compose_language_service",
-          "gopls",
-          "html",
-          "jsonls",
-          "tsserver",
-          "marksman",
-          "nimls",
-          "pylsp",
-        }
-      }
+    "jay-babu/mason-lspconfig.nvim",
+    -- overrides `require("mason-lspconfig").setup(...)`
+    opts = {
+      ensure_installed = {
+        "tsserver",
+        "gopls",
+        "clangd",
+        "markdownlint",
+        "typescript-language-server",
+        -- add more arguments for adding more LSP servers
+      },
+    },
   },
   -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
   {
