@@ -15,7 +15,7 @@ if not pcall(require, "lazy") then
     vim.cmd.quit()
 end
 
-require "lspconfig"
 require "lazy_setup"
 require "polish"
 require "mapping"
+require "lspconfig"
