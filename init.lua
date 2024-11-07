@@ -15,6 +15,8 @@ if not pcall(require, "lazy") then
     vim.cmd.quit()
 end
 
+colorsheme = "tokyo_night_by_rojadesign"
+
 require "lazy_setup"
 require "polish"
 require "mapping"

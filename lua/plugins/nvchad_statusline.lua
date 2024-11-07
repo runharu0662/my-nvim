@@ -17,9 +17,9 @@ return {
                 -- define the separators between each section
                 separators = {
 
-                    left = { "", "" }, -- 左側を三角形に
-                    right = { "", "" }, -- 右側を三角形に
-                    tab = { "", "" }, -- タブも三角形を維持
+                    left = { "", "" }, -- 左側を三角形に
+                    right = { "", "" }, -- 右側を三角形に
+                    tab = { "", "" }, -- タブも三角形を維持
                 },
                 -- add new colors that can be used by heirline
                 colors = function(hl)
