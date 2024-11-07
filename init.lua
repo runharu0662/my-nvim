@@ -18,6 +18,3 @@ end
 require "lazy_setup"
 require "polish"
 require "mapping"
-
-vim.opt.tabstop = 4 -- タブ文字が表すスペースの幅
-vim.opt.shiftwidth = 4 -- 自動インデントの幅
