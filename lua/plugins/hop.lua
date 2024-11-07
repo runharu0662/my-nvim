@@ -6,8 +6,7 @@ return {
         multi_windows = false,
     },
     keys = {
-        -- <leader><leader> に "Hop" という説明を追加
-        { "<space>h", "", mode = "n", desc = "Hop" },
+        { "<space>a", "", mode = "n", desc = "Hop" },
 
         -- <leader><leader> 以下のマッピング
         { "<leader><leader>w", "<cmd>HopWord<CR>", mode = "n", desc = "Hop Word" },
