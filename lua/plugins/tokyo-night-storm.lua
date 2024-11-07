@@ -1,4 +1,32 @@
+-- "AstroNvim/astroui" を削除し、"folke/tokyonight.nvim" に置き換える
+return {
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {
+            -- お好みのテーマスタイルを指定 (例: storm, night, day)
+            style = "storm",
+            -- 背景を透明に設定
+            transparent = true,
+            -- ハイライトのカスタマイズオプション
+            on_highlights = function(hl, c)
+                hl.Normal = { bg = "NONE" }
+                hl.NormalNC = { bg = "NONE" }
+                hl.NormalFloat = { bg = "NONE" }
+                hl.FloatBorder = { bg = "NONE" }
+                -- NeoTree用のハイライト設定
+                hl.NeoTreeNormal = { bg = "NONE" }
+                hl.NeoTreeNormalNC = { bg = "NONE" }
+                hl.NeoTreeEndOfBuffer = { bg = "NONE" }
+                hl.NeoTreeCursorLine = { bg = "NONE" }
+                hl.NeoTreeWinSeparator = { bg = "NONE" }
+            end,
+        },
+    },
+}
 -- AstroUI provides the basis for configuring the AstroNvim User Interface
+--[[
 -- Configuration documentation can be found with `:h astroui`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
 --       as this provides autocomplete and documentation while editing
@@ -9,7 +37,7 @@ return {
     ---@type AstroUIOpts
     opts = {
         -- change colorscheme
-        colorscheme = "tokyonight-storm",
+        colorscheme = "astrodark",
         -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
         highlights = {
             init = {
@@ -24,7 +52,7 @@ return {
                 NormalFloat = { bg = "NONE" }, -- 浮動ウィンドウの背景透過
                 FloatBorder = { bg = "NONE" }, -- 浮動ウィンドウの枠の背景透過
             },
-            --[[
+
             astrodark = {
                 Normal = { bg = "NONE" },
                 NormalNC = { bg = "NONE" },
@@ -36,8 +64,8 @@ return {
                 NormalFloat = { bg = "NONE" }, -- astrodarkテーマでも floatterm を透過
                 FloatBorder = { bg = "NONE" }, -- 枠の背景透過
             },
-            ]]
-            --
+            
+            
         },
 
         -- Icons can be configured throughout the interface
@@ -56,3 +84,5 @@ return {
         },
     },
 }
+]]
+--
