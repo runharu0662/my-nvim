@@ -6,7 +6,7 @@ return {
         multi_windows = false,
     },
     keys = {
-        { "<space>a", "", mode = "n", desc = "Hop" },
+        { "<space><space>", "", mode = "n", desc = "Hop" },
 
         -- <leader><leader> 以下のマッピング
         { "<leader><leader>w", "<cmd>HopWord<CR>", mode = "n", desc = "Hop Word" },
