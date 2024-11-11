@@ -31,6 +31,4 @@ using ull = unsigned long long;
 
 //--------------------------------------------------------------------
 
-int main() {
-  // code here
-}
+int main() {}
