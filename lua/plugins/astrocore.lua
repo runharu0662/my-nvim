@@ -27,8 +27,8 @@ return {
             opt = { -- vim.opt.<key>
                 relativenumber = false,
                 number = true, -- sets vim.opt.number
-                tabstop = 4, -- タブ幅（4スペースに設定）
-                shiftwidth = 4, -- 自動インデントのスペース数（通常はtabstopと一致）
+                tabstop = 2, -- タブ幅（4スペースに設定）
+                shiftwidth = 2, -- 自動インデントのスペース数（通常はtabstopと一致）
                 expandtab = true, -- タブをスペースに展開  tabstop = 4, -- sets vim.opt.tabstop
                 spell = false, -- sets vim.opt.spell
                 signcolumn = "yes", -- sets vim.opt.signcolumn to yes
@@ -54,9 +54,7 @@ return {
                 -- mappings seen under group name "Buffer"
                 ["<Leader>bd"] = {
                     function()
-                        require("astroui.status.heirline").buffer_picker(
-                            function(bufnr) require("astrocore.buffer").close(bufnr) end
-                        )
+                        require("astroui.status.heirline").buffer_picker(function(bufnr) require("astrocore.buffer").close(bufnr) end)
                     end,
                     desc = "Close buffer from tabline",
                 },
