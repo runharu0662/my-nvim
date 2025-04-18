@@ -1,9 +1,9 @@
 -- plugins/jaq-nvim.lua
 return {
-  'thinca/vim-quickrun',
+  "thinca/vim-quickrun",
   config = function()
     -- QuickRun の設定
-    vim.cmd([[
+    vim.cmd [[
       let g:quickrun_config = {}
 
       " C++ファイルを実行する時に、実行時間を計測する
@@ -14,10 +14,10 @@ return {
 
       " QuickRun のデフォルトの分割設定 (垂直分割)
       let g:quickrun_config['_'] = {
-      \  'split' : 'vertical'
-      \}
-      set splitright
-    ]])
-  end
+      \  'outputter/buffer/split' : '',
+      \  'outputter/buffer/type' : 'popup',
+      \  'outputter/buffer/into' : 'quickrun#preview#float',
+      \  'hook/time/enable' : 1
+      \}    ]]
+  end,
 }
-
