@@ -1,4 +1,4 @@
-# Runharu Neovim
+# Runharu Neovim(for mac)
 
 **NOTE:** This is for AstroNvim v4+
 
