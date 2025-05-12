@@ -1,3 +1,4 @@
+--[[
 return {
     {
         "epwalsh/obsidian.nvim",
@@ -37,3 +38,4 @@ return {
         },
     },
 }
+]]
