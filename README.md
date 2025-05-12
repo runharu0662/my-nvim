@@ -1,26 +1,43 @@
-# Runharu Neovim(for mac)
+# my-nvim
 
-**NOTE:** This is for AstroNvim v4+
+This is my personal Neovim configuration using **Lua**, **Lazy.nvim**, and **lsp-zero** for a modern development setup.  
+Tested on **macOS** and **WSL2**.
 
-This Application for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+---
 
-## Make backup
+## 🚀 Features
 
-```shell
-mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
-mv ~/.local/state/nvim ~/.local/state/nvim.bak
-mv ~/.cache/nvim ~/.cache/nvim.bak
-```
+- ⚡ Lazy.nvim for fast plugin loading
+- 🧠 LSP support via lsp-zero and mason.nvim
+- 🔍 Fuzzy finding with Telescope
+- 🌈 Syntax highlighting with Treesitter
+- 💡 Autocompletion with nvim-cmp
+- 🎨 TokyoNight theme + lualine statusline
 
-#### Clone the repository
+---
 
-```shell
-git clone https://github.com/runharu0662/my-nvim ~/.config/nvim
-```
+## 📦 Requirements
 
-#### Start Neovim
+### ✅ General (Mac / WSL)
+- **Neovim 0.9+**
+- **git**
+- **curl**
+- **ripgrep** (`rg`)
+- **fd** (`fd-find` on Ubuntu)
+- **Nerd Font** (recommended: [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads))
 
-```shell
-nvim
-```
+### 💻 macOS
+- `brew install neovim ripgrep fd`
+- Terminal: iTerm2 or Alacritty with Nerd Font
+
+### 🐧 WSL2 (Ubuntu)
+```bash
+sudo apt update && sudo apt install -y \
+  neovim git curl unzip \
+  ripgrep fd-find python3-pip build-essential
+
+# Clipboard integration (optional)
+curl -sLo /tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/download/v0.0.4/win32yank-x64.zip
+unzip -p /tmp/win32yank.zip win32yank.exe > /tmp/win32yank.exe
+chmod +x /tmp/win32yank.exe
+sudo mv /tmp/win32yank.exe /usr/local/bin/
