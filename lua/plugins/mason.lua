@@ -6,10 +6,10 @@ return {
         -- overrides `require("mason-lspconfig").setup(...)`
         opts = {
             ensure_installed = {
-                "clangd",
+                -- "clangd",
+                -- "grammery"
                 "eslint",
                 "ltex",
-                "grammarly",
                 -- add more arguments for adding more LSP servers
             },
         },
