@@ -5,17 +5,17 @@ return {
         lazy = false,
         priority = 1000,
         opts = {
-            -- お好みのテーマスタイルを指定 (例: storm, night, day)
+            --  storm, night, day
             style = "storm",
-            -- 背景を透明に設定
+            -- set tranceparent
             transparent = true,
-            -- ハイライトのカスタマイズオプション
+            -- hilights
             on_highlights = function(hl, c)
                 hl.Normal = { bg = "NONE" }
                 hl.NormalNC = { bg = "NONE" }
                 hl.NormalFloat = { bg = "NONE" }
                 hl.FloatBorder = { bg = "NONE" }
-                -- NeoTree用のハイライト設定
+                -- forneotree
                 hl.NeoTreeNormal = { bg = "NONE" }
                 hl.NeoTreeNormalNC = { bg = "NONE" }
                 hl.NeoTreeEndOfBuffer = { bg = "NONE" }
